@@ -6,6 +6,7 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const csvWriter = createCsvWriter({
   path: 'out.csv',
   header: [
+    {id: 'deviceType', title: '设备类型'},
     {id: 'clientType', title: '客户端'},
     {id: 'videoName', title: '视频名称'},
     {id: 'videoHeight', title: '视频高度'},
