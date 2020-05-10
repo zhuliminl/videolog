@@ -29,8 +29,10 @@ router.get('/videolog', function(req, res, next) {
   const { query = {} } = req
 
   const testTime = new Date().toLocaleTimeString()
-  const {params = ''} = query
-  // console.log('saul -------params', params)
+  let {params = ''} = query
+  console.log('saul -------params', params)
+  params = decodeURIComponent(params)
+  console.log('sual ------- params after', params)
   const params_obj = querystring.parse(params)
   console.log('saul ----------', params_obj)
   const {
